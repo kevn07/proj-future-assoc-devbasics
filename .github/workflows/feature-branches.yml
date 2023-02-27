@@ -10,7 +10,7 @@ jobs:
       - name: Install dependancy
         run: |
           npm install
-      - name: Install dependancy
+      - name: Run test
         run: |
           npm test
-
+      - run: echo "🍏 This job's status is ${{ job.status }}."
