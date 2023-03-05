@@ -1,4 +1,5 @@
 import "./App.css";
+import pokemonLogo from "./pokemon_logo.svg";
 import { useEffect, useState } from "react";
 import { PokemonCard } from "./components/PokemonCard";
 
@@ -26,7 +27,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Fetch a Pokemon</h1>
+        <img src={pokemonLogo} alt="pokemon-logo" width="500px"></img>
+        <br />
         {pokemonData && <PokemonCard pokemonData={pokemonData} />}
         <br />
         <button className="StyledButton" onClick={getRandomPokemon}>
