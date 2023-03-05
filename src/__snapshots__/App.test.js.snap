@@ -7,9 +7,12 @@ exports[`page renders correctly 1`] = `
   <header
     className="App-header"
   >
-    <h1>
-      Fetch a Pokemon
-    </h1>
+    <img
+      alt="pokemon-logo"
+      src="pokemon_logo.svg"
+      width="500px"
+    />
+    <br />
     <br />
     <button
       className="StyledButton"
