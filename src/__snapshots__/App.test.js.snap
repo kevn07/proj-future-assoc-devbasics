@@ -7,35 +7,16 @@ exports[`page renders correctly 1`] = `
   <header
     className="App-header"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <p>
-      Name | Mantel Brand | Favourite Food | Last show watched
-    </p>
-    <p>
-      Michael Nguyen | DigIO | Steak | Tinder Swindler
-    </p>
-    <p>
-      Adam Schlicht | Kasna | Sultana Bran | Flight of the Conchords
-    </p>
-    <p>
-      Ethan Moliver | CMD | Spicy char kway teow | Community
-    </p>
-    <p>
-      Daniel Chegwidden | CMD | Ramen | Business Proposal
-    </p>
-    <p>
-      Ruhaab Sheikh | CMD | Biryani | Formula 1: Drive to Survive
-    </p>
-    <p>
-      Nauvoo Perez | Kasna | Currently: Bubble Tea | Miss Fisher's Murder Mysteries
-    </p>
-    <p>
-      Olly Wilson | DigIO | Homemade Pizza | The Book of Boba Fett
-    </p>
+    <h1>
+      Fetch a Pokemon
+    </h1>
+    <br />
+    <button
+      className="StyledButton"
+      onClick={[Function]}
+    >
+      Fetch Pokemon
+    </button>
   </header>
 </div>
 `;

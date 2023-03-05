@@ -1,27 +1,37 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { MichaelNguyen } from "./components/MichaelNguyen/MichaelNguyen";
-import { AdamSchlicht } from "./components/AdamSchlicht/AdamSchlicht";
-import { EthanMoliver } from "./components/EthanMoliver/EthanMoliver";
-import { DanielChegwidden } from "./components/DanielChegwidden/DanielChegwidden";
-import { RuhaabSheikh } from "./components/RuhaabSheikh/RuhaabSheikh";
-import { NauvooPerez } from "./components/NauvooPerez/NauvooPerez";
-import { OllyWilson } from "./components/OllyWilson/OllyWilson";
+import { useEffect, useState } from "react";
+import { PokemonCard } from "./components/PokemonCard";
 
 function App() {
+  const pokeUrl = "https://pokeapi.co/api/v2/pokemon";
+  const totalPokemonCount = 1015;
+  const [pokemonData, setPokemonData] = useState(null);
+
+  const getRandomPokemon = async (url = pokeUrl) => {
+    const pokeIndex = Math.floor(Math.random() * totalPokemonCount); // random pokemon index
+    const response = await fetch(`${pokeUrl}/${pokeIndex}`); // returns promise
+    const data = await response.json(); // await promise
+    const pokemonData = {
+      name: data.name,
+      sprite: data.sprites.front_default,
+      types: data.types,
+    }; // construct obj with relevant data
+    setPokemonData(pokemonData); // set data state
+  };
+
+  useEffect(() => {
+    getRandomPokemon();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Name | Mantel Brand | Favourite Food | Last show watched</p>
-        <MichaelNguyen />
-        <AdamSchlicht />
-        <EthanMoliver />
-        <DanielChegwidden />
-        <RuhaabSheikh />
-        <NauvooPerez />
-        <OllyWilson />
-        <h1>hello wooooorrrllldddd</h1>
+        <h1>Fetch a Pokemon</h1>
+        {pokemonData && <PokemonCard pokemonData={pokemonData} />}
+        <br />
+        <button className="StyledButton" onClick={getRandomPokemon}>
+          Fetch Pokemon
+        </button>
       </header>
     </div>
   );
