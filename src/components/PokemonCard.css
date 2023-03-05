@@ -1,0 +1,25 @@
+.CardContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 493px;
+  width: 333px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.TypeList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.CardHeading {
+  color: black;
+}
+
+@import "type.css";
