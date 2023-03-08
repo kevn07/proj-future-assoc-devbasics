@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 
 test("heading should always be there", () => {
   render(<App />);
-  const heading = screen.getByText(/Fetch a Pokemon/i);
+  const heading = screen.getByText(/Fetch Pokemon/i);
   expect(heading).toBeInTheDocument();
 });
 
