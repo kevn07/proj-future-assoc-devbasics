@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h3>Pokemon Generator</h3>
+        <h3>Fetch a Pokemon</h3>
         {pokemonData && <PokemonCard pokemonData={pokemonData} />}
         <br />
         <button className="StyledButton" onClick={getRandomPokemon}>

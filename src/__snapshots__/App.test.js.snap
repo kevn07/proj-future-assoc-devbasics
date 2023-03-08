@@ -7,9 +7,9 @@ exports[`page renders correctly 1`] = `
   <header
     className="App-header"
   >
-    <h1>
+    <h3>
       Fetch a Pokemon
-    </h1>
+    </h3>
     <br />
     <button
       className="StyledButton"
