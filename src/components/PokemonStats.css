@@ -1,0 +1,18 @@
+.StatContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 26px;
+  width: 100%;
+  justify-content: space-between;
+}
+.ListClass {
+  list-style-type: none;
+  text-align: left;
+}
+
+.SortButton {
+  align-self: center;
+  width: 200px;
+  height: 70px;
+  border-radius: 12px;
+}

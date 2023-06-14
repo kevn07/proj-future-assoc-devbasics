@@ -4,9 +4,10 @@
   flex-direction: column;
   align-items: center;
   min-height: 493px;
-  width: 333px;
+  min-width: 333px;
   border-radius: 10px;
   background-color: white;
+  color: black;
 }
 
 .TypeList {
@@ -20,6 +21,15 @@
 
 .CardHeading {
   color: black;
+}
+
+.SpriteContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  font-size: 26px;
 }
 
 @import "type.css";
