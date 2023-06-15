@@ -27,6 +27,8 @@ export const PokemonCard = ({ pokemonData }) => {
           return <span className={`type ${obj.type.name}`} key={obj.slot} />;
         })}
       </div>
+
+      {/* task 4 */}
       <p>
         {pokemonData.noOfLocations
           ? `Encountered in ${pokemonData.noOfLocations} locations`

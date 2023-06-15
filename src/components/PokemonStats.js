@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PokemonStats.css";
 
+// Task 1, 2, 3
 export const PokemonStats = ({ pokemonStatsData }) => {
   const [sort, setSort] = useState("ASC");
 
@@ -12,7 +13,7 @@ export const PokemonStats = ({ pokemonStatsData }) => {
 
   const sortStatList = () => {
     if (sort === "ASC") {
-      // important! must create new list in order for react to re-render list
+      // important! must create new list in order for react to know the list order has changed
       setPokemonStats((pokemonStats) => [
         ...pokemonStats.sort((a, b) => (a.base_stat < b.base_stat ? 1 : -1)),
       ]);

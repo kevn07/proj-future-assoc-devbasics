@@ -11,6 +11,8 @@ function App() {
   const getRandomPokemon = async (url = pokeUrl) => {
     const pokeIndex = Math.floor(Math.random() * totalPokemonCount); // random pokemon index
     const response = await fetch(`${pokeUrl}/${pokeIndex}`); // returns promise
+
+    // Task 4
     const encounterResponse = await fetch(`${pokeUrl}/${pokeIndex}/encounters`);
     const data = await response.json(); // await promise
     const encounterData = await encounterResponse.json();
